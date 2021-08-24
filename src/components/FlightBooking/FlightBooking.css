@@ -1,0 +1,21 @@
+.FlightBooking {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.airplane {
+  height: 1612px;
+  width: 428px;
+  border: black 2px solid;
+  background-image: url("../../assets/airplane.jpg");
+  right: 20px;
+  top: 20px;
+}
+
+.container {
+  margin-left: 128px;
+  margin-top: 290px;
+  height: 925px;
+  width: 163px;
+  border: black 1.5px solid;
+}

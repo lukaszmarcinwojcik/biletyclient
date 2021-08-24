@@ -1,0 +1,52 @@
+.loginpanel {
+  position: fixed;
+  margin-left: 30%;
+  margin-top: 70px;
+  background-color: rgba(128, 128, 128, 0.952);
+  border: 2px solid black;
+  width: 40%;
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.btnclose {
+  height: 30px;
+}
+
+.loginlabel {
+  display: block;
+  text-align: center;
+}
+
+.logPanel {
+  display: block;
+  height: 30px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 150px;
+}
+
+.btnform {
+  display: block;
+  text-align: center;
+  height: 30px;
+  width: 160px;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.msg {
+  color: brown;
+}
+
+.reglogbtn {
+  color: darkred;
+}
+
+.reglogbtn:hover {
+  color: rgb(37, 2, 2);
+}
