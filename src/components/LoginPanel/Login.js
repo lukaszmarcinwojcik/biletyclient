@@ -44,7 +44,7 @@ class Login extends React.Component {
           />
         </label>
         <label className={"loginlabel"} htmlFor="password">
-          Wprowadz haslo:
+          Wprowadz hasło:
           <input
             className={"logPanel"}
             type="password"

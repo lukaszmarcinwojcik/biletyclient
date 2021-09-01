@@ -5,42 +5,45 @@ import "./Seat.css";
 
 class Seat extends React.Component {
     state = {
+        isTaken:false,
         isActive: false,
         klasa: "seat",
         name: null,
     };
     componentDidMount() {
         this.setState({
+            isTaken: this.props.isTaken,
             isActive: this.props.isActive,
             klasa: "seat",
             name: this.props.name
-      
           })
-        // this.setStartDate();
-        // this.setReturnDate();
+          if(this.props.isTaken){
+            this.setState({
+              klasa: "isTaken",
+            })
+          }
       }
     
     handleClick = (e) => {
-        const value = e.target.value;
-        console.log(this.props.name);
-        alert("klik "+this.props.name);
-    
-    // const name = e.target.name;
-    // const value = e.target.value;
-    // console.log("w return: ",name, value)
-
-  
-
-    //   this.setState({
-    //     [name]: value,
-    //   });
+      
+      if(this.props.isTaken){
+        alert("To miejsce jest zajęte :(");
+        return;
+      }
+      this.props.handleSelectSeatChange(e)
     };
 
 
   render() {
     return (
-        <div onClick={this.handleClick} isActive={this.state.isActive} className={this.state.klasa}>
-        </div>
+        <button key={this.props._id}
+        // onClick={this.props.handleSelectSeatChange} 
+        onClick={this.handleClick}
+        value={this.props.name} 
+        // isActive={this.state.isActive} 
+        className={this.state.klasa}
+        >
+        </button>
     );
   }
 }

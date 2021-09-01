@@ -15,6 +15,8 @@ class LoginPanel extends React.Component {
     });
   };
   render() {
+  
+  
     return (
       <div className={"loginpanel"}>
         {this.state.isActiveLogin ? (

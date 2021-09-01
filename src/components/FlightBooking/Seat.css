@@ -1,11 +1,22 @@
 .seat {
   margin: 4px;
   margin-top: 8px;
-  height: 15px;
-  width: 15px;
+  height: 19px;
+  width: 19px;
   float: left;
   border: black 2px solid;
+  border-radius: 4px;
   background-color: green;
+}
+.isTaken {
+  margin: 4px;
+  margin-top: 8px;
+  height: 19px;
+  width: 19px;
+  float: left;
+  border: black 2px solid;
+  border-radius: 4px;
+  background-color: darkred;
 }
 .seat:hover {
   background-color: lightgreen;

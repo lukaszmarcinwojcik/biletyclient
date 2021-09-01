@@ -1,8 +1,166 @@
 .FlightBooking {
-  display: inline-block;
-  margin: 0 auto;
+  /* display: inline-block; */
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 2px solid white;
+  width: 610px;
+  font-size: 18px;
+}
+/* ==============wybor miejsca wylotu/przylotu==================== */
+.selectCity {
+  border: solid 2px white;
+  border-radius: 8px;
+  width: 575px;
+  margin: auto;
+}
+.departureCityLabel {
+  margin-left: 10px;
+}
+.departureCitySelect {
+  height: 25px;
+  font-size: 16px;
+  border-radius: 7px;
+
+  width: 130px;
+  margin: 10px;
+  margin-right: 20px;
+}
+.arrivalCitySelect {
+  height: 25px;
+  font-size: 16px;
+  border-radius: 7px;
+
+  width: 130px;
+  font-size: 15px;
+  margin: 10px;
+}
+/* ==============bulet w dwie strony==================== */
+.twoWayTicket {
+  border: solid 2px white;
+  border-radius: 8px;
+
+  width: 155px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.twoWayTicketInput {
+  margin: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
 }
 
+/* ==============data wylotu/powrotu==================== */
+.departureArrivalDate {
+  border: solid 2px white;
+  border-radius: 8px;
+  width: 575px;
+  margin: auto;
+}
+.departureTimeLabel {
+  margin-left: 10px;
+}
+.departureTimeInput {
+  margin: 10px;
+  margin-right: 29px;
+  width: 140px;
+  height: 23px;
+  font-size: 16px;
+  border-radius: 7px;
+}
+.arrivalTimeInput {
+  margin: 10px;
+  width: 140px;
+  height: 23px;
+  font-size: 16px;
+  border-radius: 7px;
+}
+
+/* ==============div z pogoda==================== */
+.weatherDiv {
+  /* border: solid 2px white; */
+  border-radius: 8px;
+  width: 575px;
+
+  margin: auto;
+}
+
+.departureWeatherDiv {
+  border: solid 2px white;
+  border-radius: 8px;
+  width: 260px;
+  /* height: 60px; */
+  margin: auto;
+  margin-top: 10px;
+  margin-left: 0px;
+  float: left;
+}
+
+.arrivalWeatherDiv {
+  border: solid 2px white;
+  border-radius: 8px;
+  width: 280px;
+  /* height: 60px; */
+  margin: auto;
+  margin-top: 10px;
+  margin-right: 0px;
+  float: right;
+}
+.weatherInfo {
+  margin-left: 10px;
+  float: left;
+}
+.weatherImgDiv {
+  margin-top: 15px;
+  margin-left: 15px;
+  float: left;
+}
+.weatherImg {
+  height: 80px;
+  width: auto;
+}
+/* ==============przycisk szukaj (albo kazdy)==================== */
+.btnFind {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+
+  width: 580px;
+  height: 45px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+/* ============== Sekcja 2 ==================== */
+
+.seatLabel {
+  margin: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.extraBaggageInput {
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.maxNumberOfPassenger {
+  margin-left: 10px;
+  width: 50px;
+  height: 25px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.dateOfArrival {
+  margin-left: 10px;
+  width: 80px;
+  height: 25px;
+  border-radius: 5px;
+  font-size: 16px;
+}
 .airplane {
   height: 1612px;
   width: 428px;
@@ -10,12 +168,22 @@
   background-image: url("../../assets/airplane.jpg");
   right: 20px;
   top: 20px;
+  margin: auto;
 }
 
 .container {
-  margin-left: 128px;
-  margin-top: 290px;
+  margin-left: 129px;
+  margin-top: 288px;
   height: 925px;
   width: 163px;
-  border: black 1.5px solid;
+}
+/* ==========================PLATNOSC I PODSUMOWANIE =========================== */
+.selectCurrency {
+  height: 25px;
+  font-size: 16px;
+  border-radius: 7px;
+
+  width: 130px;
+  font-size: 15px;
+  margin-left: 10px;
 }

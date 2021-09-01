@@ -7,11 +7,12 @@
 }
 
 .titlenav {
+  text-align: center;
   color: white;
-  font-size: 24px;
+  font-size: 30px;
   /* margin-top: 13px; */
   margin-left: 13px;
-  margin-top: 10px;
+  margin-top: 7px;
 }
 
 .loginbtn {

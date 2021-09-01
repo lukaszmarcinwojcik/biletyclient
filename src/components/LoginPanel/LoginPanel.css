@@ -2,12 +2,15 @@
   position: fixed;
   margin-left: 30%;
   margin-top: 70px;
-  background-color: rgba(128, 128, 128, 0.952);
+  background-color: rgb(107, 118, 170);
   border: 2px solid black;
+  border-radius: 8px;
   width: 40%;
   height: auto;
   padding-top: 30px;
   padding-bottom: 20px;
+
+  min-width: 250px;
 }
 
 .btnclose {

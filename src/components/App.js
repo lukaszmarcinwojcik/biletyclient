@@ -10,6 +10,7 @@ class App extends React.Component {
       message: null,
       errorsList: "",
       isActiveLogPanel: false,
+      islogged: false,
       email: "",
       password: "",
     };
@@ -23,7 +24,6 @@ class App extends React.Component {
       
       const name = e.target.name;
       const value = e.target.value;
-      console.log(name, value)
         this.setState({
           [name]: value,
         });
@@ -87,6 +87,7 @@ class App extends React.Component {
   
   
     render(){
+      let islogged=localStorage.getItem('islogged')
       return (
       <div className="App">
           <NavBar
@@ -95,7 +96,7 @@ class App extends React.Component {
       {this.state.isActiveLogPanel ? (
         <LoginPanel
           handleLogout={this.handleLogout}
-          islogged={this.state.islogged}
+          islogged={islogged}
           message={this.state.message}
           errorsList={this.state.errorsList}
           handleShowLoginPanel={this.handleShowLoginPanel}
@@ -105,7 +106,9 @@ class App extends React.Component {
           handleLoginSubmit={this.handleLoginSubmit}
         />
           ) : null}
-           <FlightBooking />
+           <FlightBooking
+           handleShowLoginPanel={this.handleShowLoginPanel} 
+           />
     </div>
     );
   };
