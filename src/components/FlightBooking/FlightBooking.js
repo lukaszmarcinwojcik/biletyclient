@@ -264,7 +264,7 @@ class FlightBooking extends React.Component {
       });
       return
     }
-    let getCurrencyLink = `http://api.nbp.pl/api/exchangerates/rates/C/${value}/?format=json`
+    let getCurrencyLink = `https://api.nbp.pl/api/exchangerates/rates/C/${value}/?format=json`
 
     fetch(getCurrencyLink, {
       method: "GET",
