@@ -60,7 +60,7 @@ class FlightBooking extends React.Component {
       alert("Nie ma takich lotów")
       return
     }
-    fetch("http://localhost:5000/flightfind", {
+    fetch("https://biletyapp.herokuapp.com/flightfind", {
       method: "POST",
       body: JSON.stringify({
         departure: this.state.departure,
@@ -83,7 +83,7 @@ class FlightBooking extends React.Component {
 
   };
   getSeatList=()=>{
-    fetch("http://localhost:5000/seat", {
+    fetch("https://biletyapp.herokuapp.com/seat", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

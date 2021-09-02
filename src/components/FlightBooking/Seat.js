@@ -36,11 +36,9 @@ class Seat extends React.Component {
 
   render() {
     return (
-        <button key={this.props._id}
-        // onClick={this.props.handleSelectSeatChange} 
+        <button key={this.props._id} 
         onClick={this.handleClick}
         value={this.props.name} 
-        // isActive={this.state.isActive} 
         className={this.state.klasa}
         >
         </button>

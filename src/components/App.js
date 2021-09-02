@@ -32,7 +32,7 @@ class App extends React.Component {
     handleLoginSubmit = (e) => {
       e.preventDefault();
   
-      fetch("http://localhost:5000/users/login", {
+      fetch("https://biletyapp.herokuapp.com/users/login", {
         method: "POST",
         body: JSON.stringify({
           email: this.state.email,
@@ -61,7 +61,7 @@ class App extends React.Component {
         });
     };
     handleLogout = () => {
-      fetch("http://localhost:5000/users/logout", {
+      fetch("https://biletyapp.herokuapp.com/users/logout", {
         headers: {
           "x-access-token": localStorage.getItem("accessToken"),
           "Content-Type": "application/json",
