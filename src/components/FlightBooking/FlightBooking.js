@@ -266,7 +266,9 @@ class FlightBooking extends React.Component {
     }
     let getCurrencyLink = `http://api.nbp.pl/api/exchangerates/rates/C/${value}/?format=json`
 
-    fetch(getCurrencyLink)
+    fetch(getCurrencyLink, {
+      method: "GET",
+    })
       .then((resp) => resp.json())
       .then((data) => {
         
