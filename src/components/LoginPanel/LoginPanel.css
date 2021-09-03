@@ -1,16 +1,18 @@
 .loginpanel {
   position: fixed;
   margin-left: 30%;
-  margin-top: 70px;
+  margin-top: 0px;
   background-color: rgb(107, 118, 170);
   border: 2px solid black;
-  border-radius: 8px;
+  border-radius: 2px;
   width: 40%;
-  height: auto;
+  height: 70vh;
+
   padding-top: 30px;
   padding-bottom: 20px;
 
-  min-width: 250px;
+  min-width: 260px;
+  overflow: auto;
 }
 
 .btnclose {

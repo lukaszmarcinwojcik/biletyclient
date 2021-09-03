@@ -14,7 +14,7 @@ class Login extends React.Component {
   render() {
     const formlogout = (
       <div className={"loginlabel"}>
-        <h2>Jestes zalogowany </h2>
+        <h2>Jesteś zalogowany </h2>
         <button
           className={"btnform"}
           type={"submit"}
@@ -33,7 +33,7 @@ class Login extends React.Component {
           </span>
         </h2>
         <label className={"loginlabel"} htmlFor="email">
-          Wprowadz email:
+          Wprowadź email:
           <input
             className={"logPanel"}
             type="email"
@@ -44,7 +44,7 @@ class Login extends React.Component {
           />
         </label>
         <label className={"loginlabel"} htmlFor="password">
-          Wprowadz hasło:
+          Wprowadź hasło:
           <input
             className={"logPanel"}
             type="password"

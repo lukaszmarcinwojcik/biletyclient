@@ -42,7 +42,7 @@ class Registration extends React.Component {
   handleRegistrationSubmit = (e) => {
     e.preventDefault();
     const { name, surname, email, password, password2 } = this.state;
-    fetch("http://localhost:5000/users/register", {
+    fetch("https://biletyapp.herokuapp.com/users/register", {
       method: "POST",
       body: JSON.stringify({
         name: name,
@@ -70,12 +70,12 @@ class Registration extends React.Component {
         <h2>
           Masz już konto?{" "}
           <span className={"reglogbtn"} onClick={this.props.handleSwitchLogReg}>
-            Przejdz do Logowania
+            Przejdź do Logowania
           </span>
         </h2>
 
         <label className={"loginlabel"} htmlFor="name">
-          Imie:
+          Imię:
           <input
             className={"logPanel"}
             type="text"
@@ -108,7 +108,7 @@ class Registration extends React.Component {
           />
         </label>
         <label className={"loginlabel"} htmlFor="password">
-          Haslo:
+          Hasło:
           <input
             className={"logPanel"}
             type="password"
@@ -119,7 +119,7 @@ class Registration extends React.Component {
           />
         </label>
         <label className={"loginlabel"} htmlFor="password">
-          Powtorz haslo:
+          Powtórz hasło:
           <input
             className={"logPanel"}
             type="password"

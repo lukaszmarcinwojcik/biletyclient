@@ -318,7 +318,24 @@ class FlightBooking extends React.Component {
       selectedNumberOfPassenger: selectedNumberOfPassenger,
     });
   }
-  
+  backToFlightFind=()=>{
+    this.setState({
+      isActiveFindFlight: true,
+      isActiveSeatSelection: false,
+      isActiveSummarySection: false,
+      isActivePaymentSection:false,
+      
+      });
+  }
+  backToSeatSelect=()=>{
+    this.setState({
+      isActiveFindFlight: false,
+      isActiveSeatSelection: true,
+      isActiveSummarySection: false,
+      isActivePaymentSection:false,
+      
+      });
+  }
   goToPayment=(e)=>{
     if(this.state.maxNumberOfPassenger!=this.state.selectedNumberOfPassenger){
       alert("Proszę wybrać wszystkie miejsca")
@@ -388,7 +405,7 @@ class FlightBooking extends React.Component {
         (<section className="findFlight">
         <form >
             <h2>
-              Wybierz rezerwacje
+              Szukaj lotu
             </h2>
             <div className="selectCity">
                   <label className={"departureCityLabel"} htmlFor="departureCity">Miejsce wylotu:</label>
@@ -403,7 +420,7 @@ class FlightBooking extends React.Component {
                   <option value="Paryż">Paryż</option>
                   </select>
 
-                  <label htmlFor="arrivalCity">Miejsce przylotu:</label>
+                  <label className={"arrivalCity"} htmlFor="arrivalCity">Miejsce przylotu:</label>
                   <select className="arrivalCitySelect" form="arrivalCity"
                   value={this.state.arrival}
                   name={"arrival"}
@@ -461,7 +478,8 @@ class FlightBooking extends React.Component {
            
               {this.state.departureWeather===null?null:
               (<div className={"departureWeatherDiv"}>
-                <div className={"weatherInfo"}> 
+                <div className={"weatherInfo"}>
+                <p>{`Pogoda ${this.state.departure}`}</p> 
                   <p>{`Temperatura: ${this.state.departureWeatherTemp} C`}</p>
                   <p>{this.state.departureWeatherType}</p>
                 </div>
@@ -475,7 +493,8 @@ class FlightBooking extends React.Component {
               </div>)}
               {this.state.arrivalWeather===null?null:
               (<div className={"arrivalWeatherDiv"}>
-                <div className={"weatherInfo"}> 
+                <div className={"weatherInfo"}>
+                  <p>{`Pogoda ${this.state.arrival}`}</p>
                   <p>{`Temperatura: ${this.state.arrivalWeatherTemp} C`}</p>
                   <p>{this.state.arrivalWeatherType}</p>
                 </div>
@@ -489,6 +508,7 @@ class FlightBooking extends React.Component {
               </div>)}
                 
             </div>
+           
             <button 
               className={"btnFind"} 
               onClick={this.getFlightData}>
@@ -540,7 +560,7 @@ class FlightBooking extends React.Component {
             </label>
           </div>
           <div className={"seatLabel"}>
-            <label htmlFor="numberOfPassenger">Wybierz ilość pasażerow:</label>
+            <label htmlFor="numberOfPassenger">Wybierz ilość pasażerów:</label>
                   <select className={"maxNumberOfPassenger"} id="maxNumberOfPassenger" form="maxNumberOfPassenger"
                   // value={this.state.arrival}
                   name={"maxNumberOfPassenger"}
@@ -561,8 +581,12 @@ class FlightBooking extends React.Component {
             <label >Miejsca: {this.state.selectedNumberOfPassenger?reservedSeatList:null} </label>
           </div>
 
-
-          <button className={"btnFind"} onClick={this.goToPayment}>Przejdz do płatności</button>
+          <button 
+              className={"btnFind"} 
+              onClick={this.backToFlightFind}>
+              Wstecz
+            </button>
+          <button className={"btnFind"} onClick={this.goToPayment}>Przejdź do płatności</button>
           <div className="airplane">
             <div className="container">
            {seatList}
@@ -582,7 +606,7 @@ class FlightBooking extends React.Component {
           (<div className={"seatLabel"}>Data powrotu {this.state.returnDate} godzina:  {this.state.flightData.arrivalTime}</div>):null}
           <div className={"seatLabel"}>Dodatkowy bagaż: {this.state.extraBaggage?"Tak":"Nie"}</div>
           
-          <div className={"seatLabel"}>Ilość pasazerów: {this.state.maxNumberOfPassenger} </div>
+          <div className={"seatLabel"}>Ilość pasażerów: {this.state.maxNumberOfPassenger} </div>
           <div className={"seatLabel"}>Miejsca: {reservedSeatList}</div>
 
           <div className={"seatLabel"}>
@@ -597,6 +621,11 @@ class FlightBooking extends React.Component {
                     </select>
           </div>
           {this.state.currency!=="PLN"?<div className={"seatLabel"}>{`Aktualny kurs ${this.state.currency} to: ${this.state.currencyValue}`}</div>:null}
+          <button 
+              className={"btnFind"} 
+              onClick={this.backToSeatSelect}>
+              Wstecz
+            </button>
           <button className={"btnFind"} onClick={this.handlePaymentSubmit}>
             Zapłać
           </button>

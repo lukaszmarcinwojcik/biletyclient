@@ -2,16 +2,18 @@
   /* display: inline-block; */
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 80px;
   border-radius: 8px;
   border: 2px solid white;
-  width: 610px;
+  width: 620px;
   font-size: 18px;
+  padding-bottom: 15px;
 }
 /* ==============wybor miejsca wylotu/przylotu==================== */
 .selectCity {
   border: solid 2px white;
   border-radius: 8px;
-  width: 575px;
+  width: 585px;
   margin: auto;
 }
 .departureCityLabel {
@@ -56,7 +58,8 @@
 .departureArrivalDate {
   border: solid 2px white;
   border-radius: 8px;
-  width: 575px;
+  width: 585px;
+  height: auto;
   margin: auto;
 }
 .departureTimeLabel {
@@ -101,7 +104,7 @@
 .arrivalWeatherDiv {
   border: solid 2px white;
   border-radius: 8px;
-  width: 280px;
+  width: 260px;
   /* height: 60px; */
   margin: auto;
   margin-top: 10px;
@@ -113,7 +116,7 @@
   float: left;
 }
 .weatherImgDiv {
-  margin-top: 15px;
+  margin-top: 30px;
   margin-left: 15px;
   float: left;
 }
@@ -124,10 +127,9 @@
 /* ==============przycisk szukaj (albo kazdy)==================== */
 .btnFind {
   margin-top: 15px;
-  margin-bottom: 15px;
   margin-left: 15px;
 
-  width: 580px;
+  width: 590px;
   height: 45px;
   font-size: 16px;
   border-radius: 8px;
@@ -166,9 +168,11 @@
   width: 428px;
   border: black 2px solid;
   background-image: url("../../assets/airplane.jpg");
+
   right: 20px;
   top: 20px;
   margin: auto;
+  margin-top: 20px;
 }
 
 .container {
@@ -186,4 +190,54 @@
   width: 130px;
   font-size: 15px;
   margin-left: 10px;
+}
+
+@media (max-width: 629px) {
+  .FlightBooking {
+    width: 400px;
+  }
+  .selectCity {
+    width: 350px;
+  }
+  .arrivalCity {
+    margin-left: 10px;
+  }
+  .departureTimeInput {
+    margin-right: 50px;
+  }
+  .arrivalDate {
+    margin-left: 10px;
+  }
+  .departureArrivalDate {
+    width: 350px;
+  }
+
+  .weatherDiv {
+    border-radius: 8px;
+    width: 350px;
+    margin: auto;
+  }
+
+  .departureWeatherDiv {
+    margin-left: 43px;
+  }
+
+  .arrivalWeatherDiv {
+    width: 260px;
+    float: left;
+    margin-left: 43px;
+  }
+
+  .btnFind {
+    width: 370px;
+  }
+
+  .airplane {
+    background-position: 50% 50%;
+    width: 328px;
+  }
+
+  .container {
+    margin-left: 82px;
+  }
 }
