@@ -194,22 +194,22 @@
 
 @media (max-width: 629px) {
   .FlightBooking {
-    width: 400px;
+    width: 350px;
   }
   .selectCity {
-    width: 350px;
+    width: 320px;
   }
   .arrivalCity {
     margin-left: 10px;
   }
   .departureTimeInput {
-    margin-right: 50px;
+    margin-right: 20px;
   }
   .arrivalDate {
     margin-left: 10px;
   }
   .departureArrivalDate {
-    width: 350px;
+    width: 320px;
   }
 
   .weatherDiv {
@@ -229,7 +229,7 @@
   }
 
   .btnFind {
-    width: 370px;
+    width: 320px;
   }
 
   .airplane {
